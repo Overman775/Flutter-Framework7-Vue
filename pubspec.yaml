@@ -1,0 +1,35 @@
+name: flutter_framework7
+description: Flutter + Framework7 + Vue experiment.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+# https://github.com/flutter/plugins/pull/1247
+# https://medium.com/flutter-community/loading-local-assets-in-webview-in-flutter-b95aebd6edad  
+  webview_flutter:
+    git:
+      url: https://github.com/asjqkkkk/plugins.git
+      path: packages/webview_flutter
+      ref: webview
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    #Framework7 asset
+    - framework7/www/
+    - framework7/www/css/
+    - framework7/www/js/
+    - framework7/www/fonts/
+    - framework7/www/static/
+    - framework7/www/static/icons/
