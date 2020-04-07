@@ -20,6 +20,14 @@
     <f7-block strong>
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
     </f7-block>
+    
+    <f7-block strong>
+      <f7-button large fill        
+        @click="openSnackBarFlutter()"
+      >
+        Open SnackBar Flutter
+      </f7-button>
+    </f7-block>
 
     <f7-block-title>Navigation</f7-block-title>
     <f7-list>
@@ -68,3 +76,12 @@
 
   </f7-page>
 </template>
+<script>
+export default {
+      methods: {
+      openSnackBarFlutter(){
+          framework7.postMessage("User Agent: " + navigator.userAgent);
+      }
+    },
+}
+</script>
